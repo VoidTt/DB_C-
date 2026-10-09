@@ -98,7 +98,7 @@ namespace CollegeDB
             using(var connection = new SqlConnection(conn_str))
             {
                 string sql = "INSERT INTO Students(FirstName, LastName, Age, GroupId)" +
-                    "VALUES(@FirstName, @LastName, @Age, @GroupId)';
+                    "VALUES(@FirstName, @LastName, @Age, @GroupId)";
                 connection.Execute(sql, new { @FirstName = first_name, @LastName = last_name, @Age = age, GroupId = group_id });
             }
         }
